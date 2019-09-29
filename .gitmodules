@@ -1,0 +1,3 @@
+[submodule "libs/jsqrcode"]
+	path = libs/jsqrcode
+	url = git@github.com:shiwenna/jsqrcode.git

@@ -1,0 +1,23 @@
+{
+  "name": "myep-qr-reader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/main.js",
+  "scripts": {
+    "dev:client": "ngrok http 3000",
+    "dev:server": "backpack",
+    "build": "backpack build"
+  },
+  "author": "Ivan Pavlov",
+  "license": "MIT",
+  "devDependencies": {
+    "backpack-core": "^0.8.4",
+    "ngrok": "^3.2.5"
+  },
+  "dependencies": {
+    "@granite-elements/granite-qrcode-scanner": "^3.0.3",
+    "@polymer/iron-demo-helpers": "^3.1.0",
+    "@webcomponents/webcomponentsjs": "^2.3.0",
+    "express": "^4.17.1"
+  }
+}

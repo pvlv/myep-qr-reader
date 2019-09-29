@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>QR reader</title>
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+      rel="stylesheet">
+    <script type="text/javascript" src="/libs/jsqrcode/src/grid.js"></script>
+    <script type="text/javascript" src="/libs/jsqrcode/src/version.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/detector.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/formatinf.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/errorlevel.js"></script>
+    <script type="text/javascript" src="/libs/jsqrcode/src/bitmat.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/datablock.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/bmparser.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/datamask.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/rsdecoder.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/gf256poly.js"></script>
+    <script type="text/javascript" src="/libs/jsqrcode/src/gf256.js"></script>
+    <script type="text/javascript" src="/libs/jsqrcode/src/decoder.js"></script>
+    <script type="text/javascript" src="/libs/jsqrcode/src/qrcode.js"></script>
+    <script type="text/javascript" src="/libs/jsqrcode/src/findpat.js"></script>
+    <script
+      type="text/javascript"
+      src="/libs/jsqrcode/src/alignpat.js"></script>
+    <script type="text/javascript" src="/libs/jsqrcode/src/databr.js"></script>
+    <script type="text/javascript" src="./webqr.js"></script>
+    <style>
+      video {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body onload="load()">
+    <div class="container" id="mainbody">
+      <div class="row justify-content-md-center" style="margin-top: 3rem;
+        margin-bottom: 3rem;">
+        <div class="col-sm-12 col-md-6">
+          <div class="card">
+            <div id="outdiv" class="card-img-top"><video id="v" class="w-100"
+                autoplay=""></video></div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm">
+                  <button type="button" id="webcamimg" onclick="setwebcam()"
+                    type="button" class="btn btn-secondary"><span class="oi
+                      oi-video" title="icon video" aria-hidden="true"></span></button>
+                </div>
+                <div class="col-sm text-right">
+                  <button type="button" id="qrimg" onclick="setimg()"
+                    type="button"
+                    class="btn btn-secondary"><span class="oi oi-file"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-6">
+          <div class="card border-default sm-12">
+            <div class="card-header">Result</div>
+            <div class="card-body text-default">
+              <p class="card-text" id="result"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas style="opacity: 0;" id="qr-canvas" width="640" height="480"></canvas>
+  </body>
+</html>
